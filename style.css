@@ -1,0 +1,36 @@
+body{
+    background-color: #272727;
+    margin-right: auto;
+    margin-left: 20px;
+    color: white;
+}
+
+h1{
+    padding: 0.25em 0.5em;
+    background: transparent;
+    border-left: solid 5px #7db4e6;
+}
+
+input{
+    background-color: lightblue;
+    color: black;
+    border-radius: 5px;
+    border: thin solid white;
+    font-size: 16px;
+}
+
+/*アットマークを強調*/
+#at{
+    background-color: black;
+    font-size: x-large;
+    font-style: oblique;
+    border-radius: 10px;
+}
+
+#submitButton{
+    background-color: aqua;
+    font-size: large;
+    font-weight: lighter;
+    border-radius: 7px;
+    border-color: black;
+}
