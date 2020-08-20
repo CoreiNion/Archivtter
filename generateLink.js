@@ -120,12 +120,18 @@ function generateLink(account,since,until){
     if(untilArray[1] - sinceArray[1] <= -1){
         alert("エラー:開始年と終了年が合ってません。")
         return 1;
-    } else if(untilArray[2] - sinceArray[2] <= -1){
-        alert("エラー:開始月と終了月が合ってません。")
-        return 1;
-    } else if(untilArray[3] - sinceArray[3] <= -1){
-        alert("エラー:開始日と終了日が合ってません。")
-        return 1;
+    //年をまたぐ場合に月/日のチェックをしないようにする
+    } else if(untilArray[1] - sinceArray[1] < 1){
+        if(untilArray[2] - sinceArray[2] <= -1){
+            alert("エラー:開始月と終了月が合ってません。")
+            return 1;
+        //月をまたぐ場合に日にちのチェックをしないようにする
+        } else if(untilArray[2] - sinceArray[2] < 1){
+            if(untilArray[3] - sinceArray[3] <= -1){
+                alert("エラー:開始日と終了日が合ってません。")
+                return 1;
+            }
+        }
     }
     //from:アカウント名 since:yyyy-mm-dd until:yyyy-mm-ddで検索されるような形にする。
     return "https://twitter.com/search?q=from%3A" + account + "%20since%3A" + since + "%20until%3A" + until;
