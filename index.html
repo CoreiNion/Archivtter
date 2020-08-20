@@ -9,7 +9,7 @@
 
 <body>
     <h1>Archivtter (アーカイブッター)</h1>
-    <p>過去のツイートを検索できるURLを作成します！</p>
+    <p>過去のツイートを検索できるリンクを作成します！</p>
     <p>アカウント名、検索したい日付の範囲を選択してください。</p>
     <p>
         <!--ユーザー名の行-->
@@ -35,24 +35,13 @@
     <p>
         <span>※見つからない場合の主な原因</span>
         <ul>
-            <li>どこか入力が間違っている。</li>
+            <li>入力が間違っている。(ユーザー名はTwitterで@から始まる名前ののことです。)</li>
             <li>期間中にツイートしていない。</li>
             <li>期間中のツイートをすべて削除した。</li>
             <li>そもそも期間中にツイッターアカウントが存在していない。</li>
         </ul>
     </p>
     <script src="generateLink.js"></script>
-
-    <!--
-    ツイートボタンのタグ
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
-        class="twitter-share-button"
-        data-size="large"
-        data-text="[ユーザー名]の[sinceDate]～[untilDate]までのツイートです！&#010;https://twitter.com/search?q=from%3A%5B[accountName]%5D%20since%3A%5B[sinceDate]%5D%20until%3A%5B[untilDate]%5D &#010;&#010;作成サイト:"
-        data-url="https://archivtter.github.io/"
-        data-hashtags="Archivtter
-        data-show-count="false">Tweet</a>
-        -->
 </body>
 
 </html>

@@ -32,13 +32,13 @@ submitButton.onclick = () => {
             tweetAreaDivided.appendChild(twScript);
             const tweetButton = document.createElement("a");
             var tweetText = "@" + userName + "の" + sinceDate + "～" + untilDate + "までのツイートです！\n" + 
-                          "https://twitter.com/search?q=from%3A%5B" + userName + "%5D%20since%3A%5B" + sinceDate + "%5D%20until%3A%5B" + untilDate + "%5D \n\n" +
+                          "https://twitter.com/search?q=from%3A" + userName + "%20since%3A" + sinceDate + "%20until%3A" + untilDate + "\n\n" +
                           "作成サイト:"
             tweetButton.setAttribute("href", "https://twitter.com/share?ref_src=twsrc%5Etfw");
             tweetButton.className = "twitter-share-button";
             tweetButton.setAttribute("data-size", "large");
             tweetButton.setAttribute("data-text", tweetText);
-            tweetButton.setAttribute("data-url", "https://archivtter.github.io/");
+            tweetButton.setAttribute("data-url", "https://corenion.github.io/Archivtter/");
             tweetButton.setAttribute("data-hashtags", "Archivtter");
             tweetButton.setAttribute("data-show-count", "false");
             tweetButton.innerText = "ツイートする"
