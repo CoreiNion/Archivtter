@@ -17,8 +17,8 @@ submitButton.onclick = () => {
             removeAllChildren(resultAreaDivided);
             //resultAreaに結果のメッセージとURLを表示
             const resultText = document.createElement("a");
-            const completeText = document.createElement("h5");
-            completeText.innerText = "URL作成しました！下のリンクをクリックすれば検索画面を開けます。"
+            const completeText = document.createElement("h4");
+            completeText.innerText = "リンクを作成しました！下のリンクをクリックすれば検索画面を開けます。";
             resultText.href = link;
             //そのままだとリンクが見ずらいので赤色に
             resultText.style = "color: red;"
@@ -33,7 +33,7 @@ submitButton.onclick = () => {
             const tweetButton = document.createElement("a");
             var tweetText = "@" + userName + "の" + sinceDate + "～" + untilDate + "までのツイートです！\n" + 
                           "https://twitter.com/search?q=from%3A" + userName + "%20since%3A" + sinceDate + "%20until%3A" + untilDate + "\n\n" +
-                          "作成サイト:"
+                          "作成サイト:";
             tweetButton.setAttribute("href", "https://twitter.com/share?ref_src=twsrc%5Etfw");
             tweetButton.className = "twitter-share-button";
             tweetButton.setAttribute("data-size", "large");
@@ -41,7 +41,7 @@ submitButton.onclick = () => {
             tweetButton.setAttribute("data-url", "https://corenion.github.io/Archivtter/");
             tweetButton.setAttribute("data-hashtags", "Archivtter");
             tweetButton.setAttribute("data-show-count", "false");
-            tweetButton.innerText = "ツイートする"
+            tweetButton.innerText = "ツイートする";
             tweetAreaDivided.appendChild(tweetButton);
         }
     }
@@ -123,12 +123,12 @@ function generateLink(account,since,until){
     //年をまたぐ場合に月/日のチェックをしないようにする
     } else if(untilArray[1] - sinceArray[1] < 1){
         if(untilArray[2] - sinceArray[2] <= -1){
-            alert("エラー:開始月と終了月が合ってません。")
+            alert("エラー:開始月と終了月が合ってません。");
             return 1;
         //月をまたぐ場合に日にちのチェックをしないようにする
         } else if(untilArray[2] - sinceArray[2] < 1){
             if(untilArray[3] - sinceArray[3] <= -1){
-                alert("エラー:開始日と終了日が合ってません。")
+                alert("エラー:開始日と終了日が合ってません。");
                 return 1;
             }
         }
