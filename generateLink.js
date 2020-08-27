@@ -21,7 +21,7 @@ submitButton.onclick = () => {
             completeText.innerText = "リンクを作成しました！下のリンクをクリックすれば検索画面を開けます。";
             resultText.href = link;
             //そのままだとリンクが見ずらいので赤色に
-            resultText.style = "color: red;"
+            resultText.style = "color: red;";
             resultText.innerText = link;
             resultAreaDivided.appendChild(completeText);
             resultAreaDivided.appendChild(resultText);
@@ -49,7 +49,7 @@ submitButton.onclick = () => {
 
 //Inputを読み取ってValueを返す関数
 function getInputValue(){
-    const sinceDateInput = document.getElementById("sinceDate")
+    const sinceDateInput = document.getElementById("sinceDate");
     const untilDateInput = document.getElementById("untilDate");
     const userNameInput = document.getElementById("userName");
     const userName = userNameInput.value;
@@ -93,7 +93,7 @@ function isInputError(userName, sinceDate, untilDate){
         }
     }
     if(!isEnglish){
-        alert("ユーザー名に英語以外の文字が含まれています。ユーザー名はTwitterで@から始まる名前ののことです。")
+        alert("ユーザー名に英語以外の文字が含まれています。ユーザー名はTwitterで@から始まる名前ののことです。");
         return true;
     }
     return false;
@@ -110,7 +110,7 @@ function generateLink(account,since,until){
     var untilArray = until.match(/^(\d\d\d\d)-(\d\d)-(\d\d)$/);
     //yyyy-mm-ddの形になってるかのチェック
     if(sinceArray == null){
-        console.error("Error:sinceの値が不正です。値を手入力した場合は、形式が合ってない可能性があります。");
+        alert("Error:sinceの値が不正です。値を手入力した場合は、形式が合ってない可能性があります。");
         return 1;
     } else if(untilArray == null){
         alert("Error:untilの値が不正です。値を手入力した場合は、形式が合ってない可能性があります。");
@@ -118,7 +118,7 @@ function generateLink(account,since,until){
     }
     //範囲がおかしくなってないかのチェック
     if(untilArray[1] - sinceArray[1] <= -1){
-        alert("エラー:開始年と終了年が合ってません。")
+        alert("エラー:開始年と終了年が合ってません。");
         return 1;
     //年をまたぐ場合に月/日のチェックをしないようにする
     } else if(untilArray[1] - sinceArray[1] < 1){
