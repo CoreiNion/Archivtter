@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Archivtter (アーカイブッター)</title>
 </head>
@@ -11,20 +12,22 @@
     <h1>Archivtter (アーカイブッター)</h1>
     <p>過去のツイートを検索できます！</p>
     <p>ユーザー名、検索したい日付の範囲を選択してください。</p>
+
+    <!--ユーザー名の行-->
     <p>
-        <!--ユーザー名の行-->
         <!--アットマークを強調-->
         <span id="at">@</span>
-
         <input id="userName" type="text" placeholder="ユーザー名">
-        <br>
+    </p>
 
-        <!--日付選択の行-->
+    <!--日付選択-->
+    <p>
         <span>検索を開始する日付:</span>
         <input id="sinceDate" type="date">
+    </p>
+    <p>
         <span>検索を終了する日付:</span>
         <input id="untilDate" type="date">
-
     </p>
     <button id="submitButton">検索用のリンクを作成！</button>
     <p>

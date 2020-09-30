@@ -20,8 +20,8 @@ submitButton.onclick = () => {
             const completeText = document.createElement("h4");
             completeText.innerText = "リンクを作成しました！下のリンクをクリックすれば検索画面を開けます。";
             resultText.href = link;
-            //そのままだとリンクが見ずらいので赤色に
-            resultText.style = "color: red;";
+            //リンクの文字を赤にし、display:blockでaタグにmarginを適用する
+            resultText.style.cssText = "color: red; display:block;";
             resultText.innerText = link;
             resultAreaDivided.appendChild(completeText);
             resultAreaDivided.appendChild(resultText);
